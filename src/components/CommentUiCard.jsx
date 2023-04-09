@@ -2,7 +2,6 @@ import React from 'react'
 
 export const CommentUiCard = ({ item, handleAddReply, commentIndex,handleCounter }) => {
     let createdAt = item?.createdAt;
-    console.log(createdAt);
     let time = createdAt?.getSeconds()<=60?createdAt?.getSeconds()+' sec ago':createdAt?.getMinutes()<=60?createdAt?.getMinutes()+' min ago':createdAt?.getHours()<=60?createdAt?.getHours()+' hrs ago':createdAt?.getDays();
     
     return (
